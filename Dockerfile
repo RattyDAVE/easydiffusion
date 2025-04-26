@@ -10,6 +10,6 @@ RUN cd /app && \
     rm Easy-Diffusion-Linux.zip && \
     cd easy-diffusion
     
-EXPORT 9000
+EXPOSE 9000
 
 CMD ./start.sh
