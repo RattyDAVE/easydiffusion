@@ -1,0 +1,16 @@
+version: "3"
+services:
+    easydiffusion:
+        container_name: easy-diffusion
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities:
+                              - gpu
+        restart: always
+        ports:
+            - 9001:9000
+        image: rattydave/easydiffusion
