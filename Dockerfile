@@ -8,7 +8,8 @@ RUN cd /app && \
     wget https://github.com/cmdr2/stable-diffusion-ui/releases/latest/download/Easy-Diffusion-Linux.zip  && \
     unzip Easy-Diffusion-Linux.zip && \
     rm Easy-Diffusion-Linux.zip && \
-    cd easy-diffusion
+    cp ./easy-diffusion/scripts/config.yaml.sample ./easy-diffusion/scripts/config.yaml && \
+    sed -i 's/listen_to_network: false/listen_to_network: true/g' ./easy-diffusion/scripts/config.yaml
     
 EXPOSE 9000
 
