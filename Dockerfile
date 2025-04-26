@@ -2,6 +2,8 @@ FROM ubuntu:rolling
 
 WORKDIR /app/easy-diffusion
 
+VOLUME /app/easy-diffusion/models
+
 RUN cd /app && \
     apt-get update && \
     apt-get install -y wget unzip curl bzip2 && \
