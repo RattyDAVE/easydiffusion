@@ -12,4 +12,5 @@ RUN cd /app && \
     
 EXPOSE 9000
 
-CMD './start.sh'
+CMD [\"./start.sh\"]
+
